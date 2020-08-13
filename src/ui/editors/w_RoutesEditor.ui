@@ -304,8 +304,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>359</width>
-        <height>505</height>
+        <width>254</width>
+        <height>225</height>
        </rect>
       </property>
       <attribute name="label">
@@ -406,8 +406,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>347</width>
-        <height>704</height>
+        <width>359</width>
+        <height>546</height>
        </rect>
       </property>
       <attribute name="label">
@@ -478,6 +478,15 @@
           <bool>false</bool>
          </property>
          <layout class="QFormLayout" name="formLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
+          <property name="rowWrapPolicy">
+           <enum>QFormLayout::DontWrapRows</enum>
+          </property>
           <item row="0" column="0">
            <widget class="QLabel" name="label_17">
             <property name="text">
@@ -570,16 +579,12 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="4" column="0" colspan="2">
            <widget class="QWidget" name="balancersWidget" native="true">
-            <layout class="QGridLayout" name="balancerLayout">
-             <item row="0" column="0">
-              <widget class="QComboBox" name="balancerSelectionCombo">
-               <property name="editable">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
+            <layout class="QGridLayout" name="balancerLayout" columnstretch="1000,1000">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
              <item row="1" column="0" rowspan="2">
               <widget class="QListWidget" name="balancerList"/>
              </item>
@@ -607,6 +612,13 @@
               <widget class="QToolButton" name="balancerAddBtn">
                <property name="text">
                 <string>...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QComboBox" name="balancerSelectionCombo">
+               <property name="editable">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -726,7 +738,6 @@
   <tabstop>routeProtocolBTCB</tabstop>
   <tabstop>routePortTxt</tabstop>
   <tabstop>enableBalancerCB</tabstop>
-  <tabstop>balancerSelectionCombo</tabstop>
   <tabstop>balancerAddBtn</tabstop>
   <tabstop>balancerList</tabstop>
   <tabstop>balancerDelBtn</tabstop>
@@ -744,8 +755,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1115</x>
-     <y>697</y>
+     <x>1089</x>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -760,8 +771,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1115</x>
-     <y>697</y>
+     <x>1089</x>
+     <y>729</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
